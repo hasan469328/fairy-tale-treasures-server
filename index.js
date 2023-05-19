@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const cors = require("cors");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
@@ -40,6 +40,14 @@ async function run() {
       const result = await toyCollection.find().limit(20).toArray();
       res.send(result);
     });
+
+    // get single toys from db
+    app.get("/toys/:id", async(req,res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)}
+      const toy = await toyCollection.findOne(query)
+      res.send(toy)
+    })
 
     // load some toys defend on user
     app.get("/myToys", async (req, res) => {
