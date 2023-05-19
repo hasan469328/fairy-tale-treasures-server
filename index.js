@@ -38,7 +38,7 @@ async function run() {
 
     // get all toys from db
     app.get('/toys', async (req, res) => {
-      const result = await toyCollection.find()
+      const result = await toyCollection.find().toArray()
       res.send(result)
     })
 
