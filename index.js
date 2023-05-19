@@ -25,22 +25,31 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    
     const toyCollection = client.db("toyDB").collection("allToys");
 
     // post toys to db
-    app.post('/toys', async(req,res) => {
+    app.post("/toys", async (req, res) => {
       const toys = req.body;
       console.log(toys);
-      const result = await toyCollection.insertOne(toys)
-      res.send(result)
-    })
+      const result = await toyCollection.insertOne(toys);
+      res.send(result);
+    });
 
     // get all toys from db
-    app.get('/toys', async (req, res) => {
-      const result = await toyCollection.find().toArray()
-      res.send(result)
-    })
+    app.get("/toys", async (req, res) => {
+      const result = await toyCollection.find().limit(20).toArray();
+      res.send(result);
+    });
+
+    // load some toys defend on user
+    app.get("/myToys", async (req, res) => {
+      let query = {};
+      if (req.query?.email) {
+        query = {email: req.query.email};
+      }
+      const result = await toyCollection.find(query).toArray();
+      res.send(result);
+    });
 
     await client.db("admin").command({ ping: 1 });
     console.log(
