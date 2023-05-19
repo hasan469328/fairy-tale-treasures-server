@@ -1,0 +1,222 @@
+[
+  {
+    "photo": "https://i.ibb.co/D9xKcc6/3605168.jpg",
+    "toyName": "Cinderella's Carriage",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$49.99",
+    "rating": 4.5,
+    "quantity": 10,
+    "description": "A magical carriage inspired by Cinderella's story. Perfect for imaginative play!"
+  },
+  {
+    "photo": "https://i.ibb.co/jLhB2bh/8ae5d67e-6925-47bd-bcfe-41afbf6b5b1e-1.jpg",
+    "toyName": "Ariel's Mermaid Doll",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$19.99",
+    "rating": 4.2,
+    "quantity": 20,
+    "description": "A beautiful mermaid doll inspired by Ariel from Disney's The Little Mermaid."
+  },
+  {
+    "photo": "https://i.ibb.co/sqBrtKK/6lk1-ch6g-191023.jpg",
+    "toyName": "Elsa's Ice Palace",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$39.99",
+    "rating": 4.7,
+    "quantity": 15,
+    "description": "Recreate the magical world of Frozen with Elsa's stunning ice palace playset."
+  },
+  {
+    "photo": "https://i.ibb.co/XsWVBXJ/81s-U3-YW6v-JL-AC-SX569.jpg",
+    "toyName": "Anna and Elsa Doll Set",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$29.99",
+    "rating": 4.5,
+    "quantity": 12,
+    "description": "A set of beautiful dolls featuring Anna and Elsa from Disney's Frozen franchise."
+  },
+  {
+    "photo": "https://i.ibb.co/bJryjfz/81-Gijv-w-Op-L-AC-SX569.jpg",
+    "toyName": "Donald Duck Plushie",
+    "sellerName": "MysticCollectibles",
+    "email": "mysticcollectibles@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$14.99",
+    "rating": 4.0,
+    "quantity": 8,
+    "description": "A soft and huggable plushie of the beloved Disney character Donald Duck."
+  },
+  {
+    "photo": "https://i.ibb.co/XjCkkGx/81s-U3-YW6v-JL-AC-SX569-1.jpg",
+    "toyName": "Donald Duck Collectible Figurine",
+    "sellerName": "EnchantedEmporium",
+    "email": "enchantedemporium@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$9.99",
+    "rating": 4.3,
+    "quantity": 20,
+    "description": "A beautifully detailed figurine capturing the mischievous charm of Donald Duck."
+  },
+  {
+    "photo": "https://i.ibb.co/pP1hNtf/7178y9n-UYz-L-AC-SX569-1.jpg",
+    "toyName": "Belle's Enchanted Rose",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$24.99",
+    "rating": 4.8,
+    "quantity": 5,
+    "description": "A stunning replica of the enchanted rose from Beauty and the Beast."
+  },
+  {
+    "photo": "https://i.ibb.co/pKzZMc4/61-Xw3-XLJUb-L-AC-SX569-1.jpg",
+    "toyName": "Elsa Costume",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$34.99",
+    "rating": 4.6,
+    "quantity": 10,
+    "description": "Let your child become Elsa with this beautiful Frozen-inspired costume."
+  },
+  {
+    "photo": "https://example.com/photo9.jpg",
+    "toyName": "Mickey Mouse Plushie",
+    "sellerName": "MysticCollectibles",
+    "email": "mysticcollectibles@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$12.99",
+    "rating": 4.2,
+    "quantity": 15,
+    "description": "A cuddly plushie featuring the iconic Disney character Mickey Mouse."
+  },
+  {
+    "photo": "https://example.com/photo10.jpg",
+    "toyName": "Rapunzel Tower Playset",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$59.99",
+    "rating": 4.9,
+    "quantity": 3,
+    "description": "Let your child recreate Rapunzel's magical tower with this enchanting playset."
+  },
+  {
+    "photo": "https://example.com/photo11.jpg",
+    "toyName": "Olaf Plushie",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$9.99",
+    "rating": 4.4,
+    "quantity": 25,
+    "description": "A lovable plushie of Olaf, the funny snowman from Disney's Frozen."
+  },
+  {
+    "photo": "https://example.com/photo12.jpg",
+    "toyName": "Minnie Mouse Doll",
+    "sellerName": "MysticCollectibles",
+    "email": "mysticcollectibles@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$19.99",
+    "rating": 4.7,
+    "quantity": 18,
+    "description": "A charming doll featuring Minnie Mouse, Disney's iconic female character."
+  },
+  {
+    "photo": "https://example.com/photo13.jpg",
+    "toyName": "Snow White Doll",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$16.99",
+    "rating": 4.3,
+    "quantity": 7,
+    "description": "A classic Snow White doll with her signature dress and apple."
+  },
+  {
+    "photo": "https://example.com/photo14.jpg",
+    "toyName": "Sven Plushie",
+    "sellerName": "MysticCollectibles",
+    "email": "mysticcollectibles@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$14.99",
+    "rating": 4.5,
+    "quantity": 11,
+    "description": "A cute and cuddly plushie of Sven, the lovable reindeer from Disney's Frozen."
+  },
+  {
+    "photo": "https://example.com/photo15.jpg",
+    "toyName": "Sleeping Beauty Castle",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$79.99",
+    "rating": 5.0,
+    "quantity": 2,
+    "description": "A majestic castle inspired by Sleeping Beauty's story. A dream come true for princess lovers!"
+  },
+  {
+    "photo": "https://example.com/photo16.jpg",
+    "toyName": "Mickey and Friends Figure Set",
+    "sellerName": "EnchantedEmporium",
+    "email": "enchantedemporium@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$29.99",
+    "rating": 4.6,
+    "quantity": 14,
+    "description": "A set of adorable figures featuring Mickey Mouse, Minnie Mouse, and other Disney friends."
+  },
+  {
+    "photo": "https://example.com/photo17.jpg",
+    "toyName": "Moana Adventure Set",
+    "sellerName": "MagicToys",
+    "email": "magictoys@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$22.99",
+    "rating": 4.4,
+    "quantity": 9,
+    "description": "Embark on exciting adventures with this Moana-themed playset, complete with figures and accessories."
+  },
+  {
+    "photo": "https://example.com/photo18.jpg",
+    "toyName": "Elsa Musical Jewelry Box",
+    "sellerName": "FantasyFables",
+    "email": "fantasyfables@example.com",
+    "subCategory": "Frozen Dolls",
+    "price": "$19.99",
+    "rating": 4.8,
+    "quantity": 6,
+    "description": "A beautiful jewelry box featuring Elsa, with a built-in music player and storage for treasures."
+  },
+  {
+    "photo": "https://example.com/photo19.jpg",
+    "toyName": "Daisy Duck Plushie",
+    "sellerName": "MysticCollectibles",
+    "email": "mysticcollectibles@example.com",
+    "subCategory": "Donald Duck",
+    "price": "$12.99",
+    "rating": 4.1,
+    "quantity": 17,
+    "description": "A delightful plushie of Daisy Duck, the stylish and sassy Disney character."
+  },
+  {
+    "photo": "https://example.com/photo20.jpg",
+    "toyName": "Rapunzel Doll",
+    "sellerName": "EnchantedEmporium",
+    "email": "enchantedemporium@example.com",
+    "subCategory": "Disney Princess",
+    "price": "$16.99",
+    "rating": 4.7,
+    "quantity": 13,
+    "description": "A beautiful doll featuring Rapunzel with her long, flowing hair and signature dress."
+  }
+]
