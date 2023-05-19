@@ -25,14 +25,16 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // jwt token routes
-    app.post("/jwt", (req, res) => {
-      const user = req.body;
-      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn: "1h",
-      });
-      res.send({ token });
-    });
+    
+    const toyCollection = client.db("toyDB").collection("allToys");
+
+    // post toys to db
+    app.post('/toys', async(req,res) => {
+      const toys = req.body;
+      console.log(toys);
+      const result = await toyCollection.insertOne(toys)
+      res.send(result)
+    })
 
     await client.db("admin").command({ ping: 1 });
     console.log(
