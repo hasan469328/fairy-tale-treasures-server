@@ -7,7 +7,12 @@ const jwt = require("jsonwebtoken");
 const port = process.env.PORT || 5000;
 
 // middleware
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Add PATCH to the allowed methods
+  })
+);
 app.use(express.json());
 
 // mongoDB
@@ -42,23 +47,49 @@ async function run() {
     });
 
     // get single toys from db
-    app.get("/toys/:id", async(req,res) => {
+    app.get("/toys/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: new ObjectId(id)}
-      const toy = await toyCollection.findOne(query)
-      res.send(toy)
-    })
+      const query = { _id: new ObjectId(id) };
+      const toy = await toyCollection.findOne(query);
+      res.send(toy);
+    });
 
     // load some toys defend on user
     app.get("/myToys", async (req, res) => {
       let query = {};
       if (req.query?.email) {
-        query = {email: req.query.email};
+        query = { email: req.query.email };
       }
       const result = await toyCollection.find(query).toArray();
       res.send(result);
     });
 
+    // update single data
+    app.patch("/toys/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedToy = req.body;
+      console.log(updatedToy);
+      const filter = { _id: new ObjectId(id) };
+      const newUpdatedUser = {
+        $set: {
+          price: updatedToy.price,
+          quantity: updatedToy.quantity,
+          description: updatedToy.description,
+        },
+      };
+      const result = await toyCollection.updateOne(filter, newUpdatedUser);
+      res.send(result);
+    });
+
+    // delete single data
+    app.delete("/toys/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await toyCollection.deleteOne(query);
+      res.send(result);
+    });
+
+    
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
