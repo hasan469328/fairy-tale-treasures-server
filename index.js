@@ -31,6 +31,13 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     const toyCollection = client.db("toyDB").collection("allToys");
+    const blogsCollection = client.db("blogsDB").collection("blogs")
+
+    // get blogs from db
+    app.get('/blogs', async(req,res)=> {
+      const result = await blogsCollection.find().toArray();
+      res.send(result)
+    })
 
     // post toys to db
     app.post("/toys", async (req, res) => {
@@ -52,6 +59,18 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const toy = await toyCollection.findOne(query);
       res.send(toy);
+    });
+
+    // get toys by category from db
+    app.get("/category", async (req, res) => {
+      let query = {};
+      if (req.query?.subCategory) {
+        console.log("ok")
+        query = { subCategory: req.query.subCategory };
+      }
+      console.log(query)
+      const result = await toyCollection.find(query).limit(2).toArray();
+      res.send(result);
     });
 
     // load some toys defend on user
@@ -89,7 +108,6 @@ async function run() {
       res.send(result);
     });
 
-    
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
