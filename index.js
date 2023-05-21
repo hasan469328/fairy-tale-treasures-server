@@ -42,7 +42,6 @@ async function run() {
     // post toys to db
     app.post("/toys", async (req, res) => {
       const toys = req.body;
-      console.log(toys);
       const result = await toyCollection.insertOne(toys);
       res.send(result);
     });
@@ -65,10 +64,8 @@ async function run() {
     app.get("/category", async (req, res) => {
       let query = {};
       if (req.query?.subCategory) {
-        console.log("ok")
         query = { subCategory: req.query.subCategory };
       }
-      console.log(query)
       const result = await toyCollection.find(query).limit(2).toArray();
       res.send(result);
     });
@@ -82,6 +79,27 @@ async function run() {
       const result = await toyCollection.find(query).toArray();
       res.send(result);
     });
+
+    // sorting ascending
+    app.get("/myToys/sortAscending", async (req, res) => {
+      let query = {};
+      if (req.query?.email) {
+        query = { email: req.query.email };
+      }
+      const result = await toyCollection.find(query).sort({price: 1}).toArray();
+      res.send(result);
+    });
+
+    app.get("/myToys/sortDescending", async (req, res) => {
+      let query = {};
+      if (req.query?.email) {
+        query = { email: req.query.email };
+      }
+      const result = await toyCollection.find(query).sort({price: -1}).toArray();
+      res.send(result);
+    });
+
+
 
     // update single data
     app.patch("/toys/:id", async (req, res) => {
